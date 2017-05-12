@@ -1,0 +1,9 @@
+CREATE USER 'hive'@'localhost' IDENTIFIED BY 'hive';
+GRANT ALL PRIVILEGES ON *.* TO 'hive'@'localhost';
+CREATE USER 'hive'@'%' IDENTIFIED BY 'hive';
+GRANT ALL PRIVILEGES ON *.* TO 'hive'@'%';
+FLUSH PRIVILEGES;
+GRANT ALL PRIVILEGES ON *.* TO 'hive'@'localhost' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON *.* TO 'hive'@'%' WITH GRANT OPTION;
+CREATE DATABASE 'hive';
+

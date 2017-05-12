@@ -1,0 +1,2 @@
+docker run --name alan_sqlservertest -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=yourStrong(!)Password' -p 1433:1433 -d microsoft/mssql-server-linux
+docker exec -it alan_sqlservertest /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P 'yourStrong(!)Password' -i <inputfile> # don't forget to add create database and use database to file and SET QUOTED_IDENTIFIER ON
