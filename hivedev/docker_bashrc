@@ -1,0 +1,23 @@
+export PATH=$HOME/bin:/usr/local/bin:/bin:/usr/bin:/usr/X11R6/bin:/sbin:/usr/sbin:/usr/local/sbin:$HOME/mytools
+
+export CDPATH=.:$HOME
+export MANPATH=/usr/share/man:/usr/man:/usr/local/share/man:/usr/local/man
+#export JAVA_TOOL_OPTIONS="-Djava.awt.headless=true"
+export MAVEN_OPTS=-Xmx2048m
+
+
+export PS1="\u:\w> "
+
+lookfor()
+{
+	ps -ax | grep $1 | grep -v grep
+}
+
+alias ll='ls -l'
+alias pop='cd $OLDPWD'
+
+export PAGER=/usr/bin/less
+export EDITOR=vi
+export JAVA_HOME=/usr
+umask 0022
+
