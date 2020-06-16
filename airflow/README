@@ -1,0 +1,13 @@
+To use this, first build the docker file:
+docker build --tag airflow-dev .
+
+Then you can run it interactively:
+docker run --name <container-name> -p 8080:8080 -i -t airflow-dev /bin/bash
+
+Once in the container, start the webserver:
+airflow initdb
+airflow webserver -p 8080 & 2>&1 > /home/gates/webserverlogs
+airflow scheduler & 2>&1 > /home/gates/schedulerlogs
+
+
+You can see the website at localhost:8080
